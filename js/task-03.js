@@ -23,7 +23,6 @@ function imagesList() {
     .join("");
 
   list.innerHTML = markup;
-  console.log(markup);
 
   list.style.display = "flex";
   list.style.flexDirection = "row";
