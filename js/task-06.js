@@ -5,20 +5,15 @@ const updateValidClass = () => {
   const inputValue = input.value.length;
 
   if (inputValue === expectedLength) {
-    updateClassGreenColor("valid", "invalid");
+    updateClassColor("valid", "invalid");
   } else {
-    updateClassRedColor("invalid", "valid");
+    updateClassColor("invalid", "valid");
   }
 };
 
-function updateClassGreenColor(valid, invalid) {
-  input.classList.remove("invalid");
-  input.classList.add("valid");
-}
-
-function updateClassRedColor(valid, invalid) {
-  input.classList.remove("valid");
-  input.classList.add("invalid");
+function updateClassColor(a, b) {
+  input.classList.add(a);
+  input.classList.remove(b);
 }
 
 input.addEventListener("blur", updateValidClass);
